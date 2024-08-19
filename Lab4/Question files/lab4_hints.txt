@@ -1,0 +1,70 @@
+Question 3:
+
+The use of the random generated number will be similar to how you solved zybooks challenge activity 2.19.3: Fixed range of random numbers.
+
+You can look through zybooks 2.19 for more info.
+
+Remember that: 
+rand() % x // will generate a value between 0 and (x - 1)
+
+e.g. rand() % 7 will force a random value between 0 and 6.
+
+So in the case of the lab where we use the variable N, N should be assigned like this:
+
+N = <some constant value> + rand() % <some constant value>
+
+For example, N = 3 + rand() % 9; ensures you have a value between 3 and 11 inclusive.
+
+Now, you need to make sure your expression allows for you to have a minimum value of 5 and a maximum value of 15. See if you could tweak the example above to get the appropriate range.
+
+ 
+
+Question 4:
+
+We want to display a right triangle. There are many ways to solve this problem. One way is to think about it in terms of rows and columns. For each row, you want to draw the right number of characters horizontally (i.e. moving from column to column along that given row).
+
+We need to use nested loops. Where:
+
+Outer loop -> selects the the row number (i.e. the line)
+      Inner loop: -> determines the number of characters that will be printed for that given row (i.e. line)
+
+ 
+
+For example:
+
+
+for(int row = 0; <condition involving row and height>; row++)
+{
+    for(int col = 0; <condition involving col and row>; col++)
+    {
+         //print something
+    }
+
+    //print something here
+}
+
+ 
+
+Notice the number between the row variable and the number of printed characters on a given row.
+
+ 
+
+row = 0 -> print 1 character
+
+row = 1 -> print 2 characters
+
+row = 2 -> print 3 characters
+
+...
+
+row = n -> print n + 1 characters
+
+ 
+
+You can use this relationship to determine the condition for your inner lab which involves variables row and col.
+
+ 
+
+Good luck!
+
+
